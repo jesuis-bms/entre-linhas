@@ -124,11 +124,17 @@
     }
   }
 
+  
   function unlockPhone() {
     cancelAnimation();
+
+    const transition = $(".story-transition", lockScreen);
+    if (transition) transition.remove();
+
     renderConversationList();
     showScreen("messages-screen");
   }
+
 
   // ==================================================
   // LISTA DE CONVERSAS
