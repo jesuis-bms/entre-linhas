@@ -586,17 +586,37 @@ function showFinalReply() {
     }
   }
 
+  
   function advanceStory() {
     if (stageIndex < story.stages.length - 1) {
+      const currentStage = getStage();
+      const transitionText = currentStage.transition;
+
       stageIndex++;
       finalReplyShown = false;
 
       renderLockScreen();
       showScreen("lock-screen");
+
+      if (transitionText) {
+        const transition = document.createElement("div");
+        transition.className = "story-transition";
+        transition.innerHTML = `
+          <p class="story-date">Alguns dias depois</p>
+          <p>${escapeHTML(transitionText)}</p>
+        `;
+
+        const notification = $("#notifications");
+
+        if (notification) {
+          notification.before(transition);
+        }
+      }
     } else {
       showFinalReply();
     }
   }
+
 
   // ==================================================
   // EVENTOS
