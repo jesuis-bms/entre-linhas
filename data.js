@@ -6,7 +6,7 @@ window.STORY_DATA = {
   profile: {
     name: "Coraline 💯 Cor",
     handle: "@coracoraline",
-    avatar: "C",
+    avatar: "🤟",
     bio: "fotos, músicas e algumas coisas sobre mim.",
     stats: {
       posts: 12,
@@ -24,51 +24,51 @@ window.STORY_DATA = {
       time: "09:41",
 
       notification: {
-        app: "Papo",
-        icon: "P",
+        app: "Mensagens",
+        icon: "📞",
         time: "agora",
-        title: "7º B | conversas",
-        message: "Gente, vocês viram o que postaram da Aline?"
+        title: "Sala 4 | conversas",
+        message: "gente, olha isso KKKKKKK"
       },
 
       conversation: {
         id: "turma",
         name: "Sala 4 | conversas",
-        avatar: "7B",
+        avatar: "📙",
         description: "Grupo da turma",
-        preview: "Vocês viram o que postaram?",
+        preview: "gente, olha isso KKKKKKK",
         time: "09:41",
-        unread: 3,
+        unread: 1,
 
         messages: [
           {
             sender: "Ju",
             avatar: "J",
-            time: "09:36",
+            time: "09:41",
             text: "gente, olha isso KKKKKKK"
           },
           {
             sender: "Rafa",
-            avatar: "R",
-            time: "09:37",
+            avatar: "💅",
+            time: "09:41",
             text: "Júlia, apaga isso. Ela vai ver."
           },
           {
             sender: "Ju",
             avatar: "J",
-            time: "09:37",
+            time: "09:42",
             text: "ué, eu só compartilhei"
           },
           {
-            sender: "Nico",
-            avatar: "N",
-            time: "09:39",
-            text: "o perfil dela tá aqui"
+            sender: "Heitor",
+            avatar: "😴",
+            time: "09:44",
+            text: "ae, o perfil dela tá aqui"
           },
           {
-            sender: "Nico",
-            avatar: "N",
-            time: "09:40",
+            sender: "Heitor",
+            avatar: "😴",
+            time: "09:44",
             type: "link",
             text: "social.app/coracoraline",
             target: "social"
@@ -96,17 +96,17 @@ window.STORY_DATA = {
 
           comments: [
             {
-              author: "Manuela",
-              handle: "@manu",
-              avatar: "M",
-              text: "alguém tira essa menina da minha tela",
+              author: "Jujuba",
+              handle: "@jujuxyz",
+              avatar: "🤩",
+              text: "credo, alguém tira essa menina da minha tela",
               time: "há 2 horas",
               tone: "hostile"
             },
             {
-              author: "Nico",
-              handle: "@nico",
-              avatar: "N",
+              author: "thr",
+              handle: "@heithorr244",
+              avatar: "😴",
               text: "KKKKKKKKKK",
               time: "há 2 horas",
               tone: "hostile"
@@ -114,8 +114,8 @@ window.STORY_DATA = {
             {
               author: "Bia",
               handle: "@bia",
-              avatar: "B",
-              text: "Clara, gostei da foto!",
+              avatar: "🎸",
+              text: "Já pensou em ser fotógrafa?",
               time: "há 1 hora",
               tone: "supportive"
             }
@@ -132,72 +132,78 @@ window.STORY_DATA = {
       time: "18:27",
 
       notification: {
-        app: "Papo",
-        icon: "P",
+        app: "Mensagens",
+        icon: "📞",
         time: "agora",
-        title: "7º B | conversas",
-        message: "Manuela enviou 8 mensagens"
+        title: "Sala 704 | conversas",
+        message: "Você tem mensagens não lidas."
       },
 
       conversation: {
         id: "turma",
         name: "Sala 4 | conversas",
-        avatar: "7B",
+        avatar: "📙",
         description: "Grupo da turma",
-        preview: "Manuela enviou 8 mensagens",
+        preview: "Ju enviou 1 mensagem(s)",
         time: "18:27",
         unread: 8,
 
         messages: [
           {
-            sender: "Manuela",
-            avatar: "M",
+            sender: "Ju",
+            avatar: "J",
             time: "18:19",
-            text: "ela me bloqueou KKKKK"
+            text: "aiai, ela me bloqueou KKKKK"
           },
           {
-            sender: "Nico",
-            avatar: "N",
+            sender: "Heitor",
+            avatar: "😴",
             time: "18:20",
-            text: "depois do que vocês comentaram, surpresa nenhuma"
+            text: "depois do que a gente comentou, surpresa nenhuma"
           },
           {
-            sender: "Manuela",
-            avatar: "M",
+            sender: "Ju",
+            avatar: "J",
             time: "18:21",
             text: "vou postar outra coisa então"
           },
           {
             sender: "Rafa",
-            avatar: "R",
+            avatar: "💅",
             time: "18:22",
             text: "isso já passou do limite."
           },
           {
-            sender: "Manuela",
-            avatar: "M",
+            sender: "Ju",
+            avatar: "J",
             time: "18:23",
-            text: "ninguém te obrigou a olhar"
+            text: "podia ser pior pq podia ser problema meu"
           },
           {
             sender: "Bia",
-            avatar: "B",
+            avatar: "🎸",
             time: "18:24",
-            text: "vocês sabem que ela tá lendo essas coisas, né?"
+            text: "vocês sabem que isso machuca, né?"
           },
           {
-            sender: "Nico",
-            avatar: "N",
+            sender: "Heitor",
+            avatar: "😴",
             time: "18:25",
             text: "então por que ela não desativa o perfil?"
           },
           {
-            sender: "Manuela",
-            avatar: "M",
+            sender: "Ju",
+            avatar: "J",
+            time: "18:26",
+            text: "Olha a nova publicação",
+          },
+          {
+            sender: "Ju",
+            avatar: "J",
             time: "18:26",
             type: "link",
-            text: "Olha a nova publicação",
-            target: "social"
+            text: "social.app/coracoraline",
+            target: "social",
           }
         ]
       },
@@ -205,9 +211,9 @@ window.STORY_DATA = {
       posts: [
         {
           id: "post-1",
-          author: "Clara Martins",
-          handle: "@claram",
-          avatar: "C",
+          author: "Coraline 💯 Cor",
+          handle: "@coracoraline",
+          avatar: "🤟",
           date: "13 de outubro",
           visual: "📷",
           visualLabel: "Uma foto no pátio da escola",
@@ -216,17 +222,17 @@ window.STORY_DATA = {
 
           comments: [
             {
-              author: "Manuela",
-              handle: "@manu",
-              avatar: "M",
-              text: "alguém tira essa menina da minha tela",
+              author: "Jujuba",
+              handle: "@jujuxyz",
+              avatar: "🤩",
+              text: "credo, alguém tira essa coisa da minha tela",
               time: "há 2 dias",
               tone: "hostile"
             },
             {
-              author: "Nico",
-              handle: "@nico",
-              avatar: "N",
+              author: "thr",
+              handle: "@heitorr244",
+              avatar: "😴",
               text: "KKKKKKKKKK",
               time: "há 2 dias",
               tone: "hostile"
@@ -234,8 +240,8 @@ window.STORY_DATA = {
             {
               author: "Bia",
               handle: "@bia",
-              avatar: "B",
-              text: "Clara, gostei da foto!",
+              avatar: "🎸",
+              text: "Já pensou em ser fotógrafa?",
               time: "há 2 dias",
               tone: "supportive"
             }
@@ -243,9 +249,9 @@ window.STORY_DATA = {
         },
         {
           id: "post-2",
-          author: "Clara Martins",
-          handle: "@claram",
-          avatar: "C",
+          author: "Coraline 💯 Cor",
+          handle: "@coracoraline",
+          avatar: "🤟",
           date: "16 de outubro",
           visual: "🎥",
           visualLabel: "Um vídeo gravado no corredor da escola",
@@ -254,26 +260,26 @@ window.STORY_DATA = {
 
           comments: [
             {
-              author: "Manuela",
-              handle: "@manu",
-              avatar: "M",
-              text: "o melhor é a cara dela no final",
+              author: "Jujuba",
+              handle: "@jujuxyz",
+              avatar: "🤩",
+              text: "o melhor é a cara dela no final KKKKKKKK",
               time: "há 15 minutos",
               tone: "hostile"
             },
             {
-              author: "Nico",
-              handle: "@nico",
-              avatar: "N",
-              text: "isso vai ficar famoso na turma",
+              author: "thr",
+              handle: "@heitorr244",
+              avatar: "😴",
+              text: "a piada já vem pronta",
               time: "há 12 minutos",
               tone: "hostile"
             },
             {
               author: "Bia",
               handle: "@bia",
-              avatar: "B",
-              text: "apaguem isso. ela não autorizou vocês.",
+              avatar: "🎸",
+              text: "apaguem isso. ela não deu liberdade pra esse tipo de 'brincadeira'.",
               time: "há 5 minutos",
               tone: "supportive"
             }
@@ -287,67 +293,73 @@ window.STORY_DATA = {
     {
       id: 2,
       date: "Terça-feira, 20 de outubro",
-      time: "21:16",
+      time: "21:12",
 
       notification: {
-        app: "Papo",
-        icon: "P",
+        app: "Mensagens",
+        icon: "📞",
         time: "agora",
         title: "Bia",
-        message: "Você precisa ver o que aconteceu com a Clara."
+        message: "Você tem mensagens não lidas."
       },
 
       conversation: {
         id: "turma",
-        name: "7º B | conversas",
-        avatar: "7B",
+        name: "Sala 4 | conversas",
+        avatar: "📙",
         description: "Grupo da turma",
         preview: "Alguém sabe dela?",
-        time: "21:16",
+        time: "21:12",
         unread: 5,
 
         messages: [
           {
             sender: "Bia",
-            avatar: "B",
+            avatar: "🎸",
             time: "21:08",
-            text: "gente, a Clara não foi à aula hoje"
+            text: "gente, vocês têm notícias da Aline?"
           },
           {
             sender: "Rafa",
-            avatar: "R",
+            avatar: "💅",
             time: "21:09",
-            text: "nem ontem. eu tentei falar com ela e ela não respondeu"
+            text: "eu tentei falar c ela ontem, mas ela nn respondeu."
           },
           {
-            sender: "Nico",
-            avatar: "N",
+            sender: "Heitor",
+            avatar: "😴",
             time: "21:10",
-            text: "talvez só esteja de saco cheio da escola"
+            text: "talvez ela passou mal ou só nn qr ir p escola."
           },
           {
             sender: "Bia",
-            avatar: "B",
+            avatar: "🎸",
             time: "21:11",
-            text: "ela me disse que não queria mais abrir as redes sociais. vocês viram o que fizeram com ela?"
+            text: "isso não é, porque ela me disse que não queria mais abrir as redes sociais"
           },
           {
-            sender: "Manuela",
-            avatar: "M",
+            sender: "Bia",
+            avatar: "🎸",
             time: "21:12",
-            text: "eu não achei que ia chegar nesse ponto"
+            text: "tá vendo o que vocês fizeram?"
+          },
+          {
+            sender: "Ju",
+            avatar: "J",
+            time: "21:12",
+            text: "mas era só brincadeira..."
           },
           {
             sender: "Rafa",
-            avatar: "R",
+            avatar: "💅",
             time: "21:13",
-            text: "mas chegou. e não foi do nada."
+            text: "'brincadeira' depois que a consciência, pesa, né, anjo?"
           },
           {
             sender: "Bia",
-            avatar: "B",
+            avatar: "🎸",
             time: "21:15",
-            text: "a mãe dela avisou que ela está recebendo ajuda. por favor, parem de compartilhar as coisas."
+            text: "ela claramente não tá bem. Viram o último post?"
           }
         ]
       },
@@ -355,28 +367,28 @@ window.STORY_DATA = {
       posts: [
         {
           id: "post-1",
-          author: "Clara Martins",
-          handle: "@claram",
-          avatar: "C",
+          author: "Coraline 💯 Cor",
+          handle: "@coracoraline",
+          avatar: "🤟",
           date: "13 de outubro",
           visual: "📷",
           visualLabel: "Uma foto no pátio da escola",
           caption: "dia comum, gente estranha e uma vontade enorme de ir pra casa.",
-          likes: 18,
+          likes: 16,
 
           comments: [
             {
-              author: "Manuela",
-              handle: "@manu",
-              avatar: "M",
-              text: "alguém tira essa menina da minha tela",
+              author: "Jujuba",
+              handle: "@jujuxyz",
+              avatar: "🤩",
+              text: "credo, alguém tira essa menina da minha tela",
               time: "há 7 dias",
               tone: "hostile"
             },
             {
-              author: "Nico",
-              handle: "@nico",
-              avatar: "N",
+              author: "thr",
+              handle: "@heitorr244",
+              avatar: "😴",
               text: "KKKKKKKKKK",
               time: "há 7 dias",
               tone: "hostile"
@@ -384,8 +396,8 @@ window.STORY_DATA = {
             {
               author: "Bia",
               handle: "@bia",
-              avatar: "B",
-              text: "Clara, gostei da foto!",
+              avatar: "🎸",
+              text: "Já pensou em ser fotógrafa?",
               time: "há 7 dias",
               tone: "supportive"
             }
@@ -393,37 +405,37 @@ window.STORY_DATA = {
         },
         {
           id: "post-2",
-          author: "Clara Martins",
-          handle: "@claram",
-          avatar: "C",
+          author: "Coraline 💯 Cor",
+          handle: "@coracoraline",
+          avatar: "🤟",
           date: "16 de outubro",
           visual: "🎥",
           visualLabel: "Um vídeo gravado no corredor da escola",
           caption: "não sabia que estavam gravando. apaguei o vídeo original, mas parece que não adiantou.",
-          likes: 42,
+          likes: 37,
 
           comments: [
             {
-              author: "Manuela",
-              handle: "@manu",
-              avatar: "M",
-              text: "o melhor é a cara dela no final",
+              author: "Jujuba",
+              handle: "@jujuxyz",
+              avatar: "🤩",
+              text: "o melhor é a cara dela no final KKKKKKKK",
               time: "há 4 dias",
               tone: "hostile"
             },
             {
-              author: "Nico",
-              handle: "@nico",
-              avatar: "N",
-              text: "isso vai ficar famoso na turma",
+              author: "thr",
+              handle: "@heitorr244",
+              avatar: "😴",
+              text: "a piada já vem pronta",
               time: "há 4 dias",
               tone: "hostile"
             },
             {
               author: "Bia",
               handle: "@bia",
-              avatar: "B",
-              text: "apaguem isso. ela não autorizou vocês.",
+              avatar: "🎸",
+              text: "apaguem isso. ela não deu liberdade pra esse tipo de 'brincadeira'.",
               time: "há 4 dias",
               tone: "supportive"
             }
@@ -431,9 +443,9 @@ window.STORY_DATA = {
         },
         {
           id: "post-3",
-          author: "Clara Martins",
-          handle: "@claram",
-          avatar: "C",
+          author: "Coraline 💯 Cor",
+          handle: "@coracoraline",
+          avatar: "🤟",
           date: "19 de outubro",
           visual: "🌧️",
           visualLabel: "Uma janela em um dia chuvoso",
@@ -442,10 +454,10 @@ window.STORY_DATA = {
 
           comments: [
             {
-              author: "Nico",
-              handle: "@nico",
-              avatar: "N",
-              text: "lá vem drama",
+              author: "Jujuba",
+              handle: "@jujuxyz",
+              avatar: "🤩",
+              text: "odeio gnt dramática",
               time: "há 1 dia",
               tone: "hostile"
             },
@@ -453,7 +465,7 @@ window.STORY_DATA = {
               author: "Bia",
               handle: "@bia",
               avatar: "B",
-              text: "Clara, estou aqui. pode falar comigo.",
+              text: "Aline, olha o pv depois",
               time: "há 20 horas",
               tone: "supportive"
             }
