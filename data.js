@@ -1,6 +1,8 @@
 
+
+
 window.STORY_DATA = {
-  appName: "Entre Linhas",
+  appName: "Não Compartilhe",
 
   // Personagem central da história
   profile: {
@@ -464,7 +466,7 @@ window.STORY_DATA = {
             {
               author: "Bia",
               handle: "@bia",
-              avatar: "B",
+              avatar: "🎸",
               text: "Aline, olha o pv depois",
               time: "há 20 horas",
               tone: "supportive"
@@ -473,7 +475,7 @@ window.STORY_DATA = {
         }
       ],
 
-      transition: "A última publicação de Clara foi feita na noite anterior. Ela não voltou à escola."
+      transition: "A última publicação de Aline foi feita na noite anterior. Ela não voltou à escola."
     }
   ],
 
@@ -483,9 +485,9 @@ window.STORY_DATA = {
     title: "Uma mensagem que ninguém queria receber.",
 
     details: [
-      "Na manhã seguinte, a turma recebeu a notícia: Clara havia passado por uma crise grave e tentado tirar a própria vida. Ela estava hospitalizada e recebendo cuidados.",
+      "Na manhã seguinte, a turma recebeu a notícia: Aline passara por uma crise grave e tentou tirar a própria vida. Ela estava hospitalizada e recebendo cuidados.",
 
-      "O bullying não explica sozinho tudo o que uma pessoa enfrenta. Mas humilhações repetidas, ameaças e ataques públicos podem agravar profundamente o sofrimento de alguém.",
+      "Aline não estava sozinha. Ela tinha pessoas que se importavam com ela, que a apoiaram e a ajudaram a buscar ajuda profissional. Mas o impacto do bullying e do cyberbullying não desapareceu da noite para o dia.",
 
       "As mensagens não desapareceram quando as pessoas fecharam o aplicativo. Os compartilhamentos continuaram circulando. E quem viu o que estava acontecendo também teve escolhas a fazer.",
 
@@ -494,9 +496,9 @@ window.STORY_DATA = {
       "Por trás de cada perfil existe uma pessoa. Na internet, como fora dela, suas escolhas têm consequências."
     ],
 
-    campaignTitle: "Entre Linhas",
+    campaignTitle: "O bullying é temporário. As feridas permanecem.",
     campaignSubtitle: "Antes de compartilhar, pense. Antes de rir, perceba. Antes que piore, intervenha.",
 
-    credits: "Uma campanha de conscientização sobre bullying e cyberbullying."
+    credits: "Uma campanha de conscientização sobre bullying e cyberbullying feita por Bernard Luiz."
   }
 };
