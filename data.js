@@ -59,13 +59,13 @@ window.STORY_DATA = {
             sender: "Ju",
             avatar: "J",
             time: "09:42",
-            text: "ué, eu só compartilhei"
+            text: "se não fosse pra ver eu nem postava, uai"
           },
           {
             sender: "Heitor",
             avatar: "😴",
             time: "09:44",
-            text: "ae, o perfil dela tá aqui"
+            text: "o perfil dela aqui"
           },
           {
             sender: "Heitor",
@@ -117,7 +117,7 @@ window.STORY_DATA = {
               author: "Bia",
               handle: "@bia",
               avatar: "🎸",
-              text: "Já pensou em ser fotógrafa?",
+            text: "Que foto linda. Já pensou em ser fotógrafa?",
               time: "há 1 hora",
               tone: "supportive"
             }
@@ -146,16 +146,16 @@ window.STORY_DATA = {
         name: "Sala 4 | conversas",
         avatar: "📙",
         description: "Grupo da turma",
-        preview: "Ju enviou 1 mensagem(s)",
-        time: "18:27",
-        unread: 8,
+        preview: "social.app/coracoraline",
+        time: "18:41",
+        unread: 9,
 
         messages: [
           {
             sender: "Ju",
             avatar: "J",
             time: "18:19",
-            text: "aiai, ela me bloqueou KKKKK"
+            text: "gente, vcs viram? ela ficou me ignorando hoje KKKKKKKK"
           },
           {
             sender: "Heitor",
@@ -167,13 +167,13 @@ window.STORY_DATA = {
             sender: "Ju",
             avatar: "J",
             time: "18:21",
-            text: "vou postar outra coisa então"
+            text: "é melhor ela ir se acostumando, porque eu não vou dar paz agora que descobri esse perfil"
           },
           {
             sender: "Rafa",
             avatar: "💅",
             time: "18:22",
-            text: "isso já passou do limite."
+            text: "é melhor vocês pararem. isso já passou do limite."
           },
           {
             sender: "Ju",
@@ -194,10 +194,16 @@ window.STORY_DATA = {
             text: "então por que ela não desativa o perfil?"
           },
           {
+            sender: "Rafa",
+            avatar: "💅",
+            time: "18:25",
+            text: "talvez porque ela não é obrigada a deixar de postar por causa de imbecis como vocês"
+          },
+          {
             sender: "Ju",
             avatar: "J",
             time: "18:26",
-            text: "Olha a nova publicação",
+            text: "Olha essa nova publicação, Rafa. Certeza que vc também vai rir"
           },
           {
             sender: "Ju",
@@ -302,7 +308,7 @@ window.STORY_DATA = {
         icon: "📞",
         time: "agora",
         title: "Bia",
-        message: "Você tem mensagens não lidas."
+        message: "gente, vocês têm notícias da Aline?"
       },
 
       conversation: {
@@ -310,7 +316,7 @@ window.STORY_DATA = {
         name: "Sala 4 | conversas",
         avatar: "📙",
         description: "Grupo da turma",
-        preview: "Alguém sabe dela?",
+        preview: "Ela sumiu.",
         time: "21:12",
         unread: 5,
 
