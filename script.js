@@ -10,6 +10,7 @@
   const messagesScreen = $("#messages-screen");
   const socialScreen = $("#social-screen");
   const endingScreen = $("#ending-screen");
+  const transitionScreen = $("#transition-screen");
 
   if (!app || !window.STORY_DATA) {
     console.error("Não foi possível carregar a história.");
@@ -52,6 +53,7 @@
       lockScreen,
       messagesScreen,
       socialScreen,
+      transitionScreen,
       endingScreen
     ].forEach((screen) => {
       if (!screen) return;
@@ -596,34 +598,39 @@ function showFinalReply() {
   }
 
   
-  function advanceStory() {
-    if (stageIndex < story.stages.length - 1) {
-      const currentStage = getStage();
-      const transitionText = currentStage.transition;
+  
+function advanceStory() {
+  const stage = getStage();
 
-      stageIndex++;
-      finalReplyShown = false;
+  const label = $("#transition-label");
+  const text = $("#transition-text");
 
-      renderLockScreen();
-      showScreen("lock-screen");
+  if (label) {
+    label.textContent =
+      stageIndex < story.stages.length - 1
+        ? story.stages[stageIndex + 1].date
+        : "O que não aparece na tela";
+  }
 
-      if (transitionText) {
-        const transition = document.createElement("div");
-        transition.className = "story-transition";
-        transition.innerHTML = `
-          <p class="story-date">Alguns dias depois</p>
-          <p>${escapeHTML(transitionText)}</p>
-        `;
+  if (text) {
+    text.textContent = stage.transition || "";
+  }
 
-        const notification = $("#notifications");
+  showScreen("transition-screen");
+}
 
-        if (notification) {
-          notification.before(transition);
-        }
-      }
-    } else {
-      showFinalReply();
-    }
+function continueTransition() {
+  if (stageIndex < story.stages.length - 1) {
+    stageIndex++;
+    finalReplyShown = false;
+
+    renderLockScreen();
+    showScreen("lock-screen");
+  } else {
+    showFinalReply();
+  }
+}
+
   }
 
 
@@ -659,6 +666,10 @@ function showFinalReply() {
 
       case "advance-story":
         advanceStory();
+        break;
+
+      case "continue-transition":
+        continueTransition();
         break;
     }
   });
