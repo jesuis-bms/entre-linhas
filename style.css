@@ -949,66 +949,81 @@ button:disabled {
    ========================================= */
 
 #transition-screen {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  min-height: 100dvh;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--bg);
-  overflow: hidden;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--background);
+    overflow: hidden;
 }
 
 #transition-screen[hidden] {
-  display: none;
+    display: none !important;
+}
+
+#transition-screen.active {
+    animation: chapter-fade-in 500ms ease both;
 }
 
 .chapter-transition {
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  min-height: 100dvh;
-  box-sizing: border-box;
-  padding: 32px 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    padding: 32px 24px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
 }
 
 .transition-label {
-  margin: 0 0 28px;
-  color: var(--accent);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+    margin-bottom: 28px;
+
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
 }
 
 .transition-divider {
-  width: 48px;
-  height: 2px;
-  margin-bottom: 28px;
-  background: var(--accent);
+    width: 48px;
+    height: 2px;
+    margin-bottom: 28px;
+
+    background: var(--accent);
 }
 
 .transition-text {
-  max-width: 520px;
-  margin: 0;
-  color: var(--text);
-  font-size: clamp(1.2rem, 4vw, 1.8rem);
-  line-height: 1.6;
+    max-width: 520px;
+    margin: 0;
+
+    color: var(--text);
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    line-height: 1.6;
 }
 
 #transition-continue {
-    margin-top: 0;
+    margin-top: 40px;
     padding: 12px 30px;
 
     border: 1px solid #77736e;
@@ -1032,12 +1047,10 @@ button:disabled {
 @keyframes chapter-fade-in {
     from {
         opacity: 0;
-        transform: translateY(8px);
     }
 
     to {
         opacity: 1;
-        transform: translateY(0);
     }
 }
 
