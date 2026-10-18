@@ -629,6 +629,11 @@
     if (!control || !app.contains(control)) return;
 
     switch (control.dataset.action) {
+      case "lock":
+        renderLockScreen();
+        showScreen("lock-screen");
+        break;
+        
       case "unlock":
         unlockPhone();
         break;
