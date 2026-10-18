@@ -335,7 +335,7 @@
 
     profileContainer.innerHTML = `
       <div class="profile-top">
-        ${avatar(profile.avatar || profile.name[0], "profile-avatar")}
+        ${avatar("🤟", "profile-avatar")}
 
         <div>
           <div class="profile-name">
