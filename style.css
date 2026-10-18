@@ -1276,3 +1276,25 @@ a {
 .final-reply-controls button:hover {
   filter: brightness(1.12);
 }
+
+
+.message-sender {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.message-avatar {
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #d9e6df;
+  color: #24382d;
+  font-size: 12px;
+  font-weight: 700;
+  overflow: hidden;
+}
