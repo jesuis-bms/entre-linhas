@@ -126,17 +126,12 @@
     }
   }
 
-  
   function unlockPhone() {
     cancelAnimation();
-
-    const transition = $(".story-transition", lockScreen);
-    if (transition) transition.remove();
 
     renderConversationList();
     showScreen("messages-screen");
   }
-
 
   // ==================================================
   // LISTA DE CONVERSAS
@@ -150,6 +145,7 @@
     if (!list) return;
 
     list.hidden = false;
+
     if (view) view.hidden = true;
 
     list.innerHTML = `
@@ -206,17 +202,19 @@
     if (!view || !messageList) return;
 
     if (list) list.hidden = true;
+
     view.hidden = false;
 
     if (title) title.textContent = conversation.name;
+
     if (description) {
       description.textContent = conversation.description;
     }
 
-    // Limpa a conversa antes de começar a sequência.
     messageList.innerHTML = "";
 
     const footer = $(".message-footer", view);
+
     if (footer) footer.innerHTML = "";
 
     finalReplyShown = false;
@@ -226,12 +224,15 @@
 
       const message = conversation.messages[i];
 
-      // A primeira mensagem aparece imediatamente.
       if (i > 0) {
         const typing = document.createElement("div");
+
         typing.className = "message typing-indicator";
         typing.textContent = "digitando...";
-        typing.setAttribute("aria-label", "Nova mensagem chegando");
+        typing.setAttribute(
+          "aria-label",
+          "Nova mensagem chegando"
+        );
 
         messageList.appendChild(typing);
         messageList.scrollTop = messageList.scrollHeight;
@@ -246,7 +247,6 @@
 
         typing.remove();
 
-        // Pequena pausa entre o indicador e a mensagem.
         await wait(importantMessage ? 1000 : 700);
 
         if (token !== animationToken) return;
@@ -255,18 +255,20 @@
       const element = document.createElement("article");
       const outgoing = message.sender === "Você";
 
-      element.className = `message${outgoing ? " outgoing" : ""}`;
+      element.className =
+        `message${outgoing ? " outgoing" : ""}`;
 
-      
       const sender = outgoing
         ? ""
         : `
           <div class="message-sender">
-            ${avatar(message.avatar || message.sender[0], "message-avatar")}
+            ${avatar(
+              message.avatar || message.sender[0],
+              "message-avatar"
+            )}
             <span>${escapeHTML(message.sender)}</span>
           </div>
         `;
-
 
       const content = message.type === "link"
         ? `
@@ -292,7 +294,6 @@
         </div>
       `;
 
-      
       messageList.appendChild(element);
       messageList.scrollTop = messageList.scrollHeight;
     }
@@ -300,13 +301,10 @@
     if (token !== animationToken) return;
 
     const continueButton = document.createElement("button");
+
     continueButton.type = "button";
     continueButton.className = "story-continue";
-    continueButton.textContent =
-      stageIndex === story.stages.length - 1
-        ? "Ver as publicações"
-        : "Continuar";
-
+    continueButton.textContent = "Ver as publicações";
     continueButton.dataset.action = "open-social";
 
     const footerAfterMessages = $(".message-footer", view);
@@ -318,7 +316,6 @@
       messageList.appendChild(continueButton);
     }
   }
-
 
   function backToConversations() {
     cancelAnimation();
@@ -358,15 +355,23 @@
       </p>
 
       <div class="profile-stats">
-        <span><strong>${profile.stats.posts}</strong> publicações</span>
-        <span><strong>${profile.stats.followers}</strong> seguidores</span>
-        <span><strong>${profile.stats.following}</strong> seguindo</span>
+        <span>
+          <strong>${profile.stats.posts}</strong> publicações
+        </span>
+        <span>
+          <strong>${profile.stats.followers}</strong> seguidores
+        </span>
+        <span>
+          <strong>${profile.stats.following}</strong> seguindo
+        </span>
       </div>
     `;
 
     feed.innerHTML = stage.posts.map((post) => {
       const comments = post.comments.map((comment) => {
-        const tone = ["hostile", "supportive"].includes(comment.tone)
+        const tone = ["hostile", "supportive"].includes(
+          comment.tone
+        )
           ? comment.tone
           : "";
 
@@ -390,7 +395,10 @@
       }).join("");
 
       return `
-        <article class="social-post" id="${escapeHTML(post.id)}">
+        <article
+          class="social-post"
+          id="${escapeHTML(post.id)}"
+        >
           <header class="post-header">
             ${avatar(post.avatar, "post-avatar")}
 
@@ -410,7 +418,9 @@
             role="img"
             aria-label="${escapeHTML(post.visualLabel)}"
           >
-            <span aria-hidden="true">${escapeHTML(post.visual)}</span>
+            <span aria-hidden="true">
+              ${escapeHTML(post.visual)}
+            </span>
             <p>${escapeHTML(post.visualLabel)}</p>
           </div>
 
@@ -433,11 +443,13 @@
 
     if (!returnButton) {
       returnButton = document.createElement("button");
+
       returnButton.id = "return-to-phone";
       returnButton.type = "button";
       returnButton.className = "story-continue";
       returnButton.dataset.action = "advance-story";
       returnButton.textContent = "Voltar ao celular";
+
       feed.after(returnButton);
     }
   }
@@ -452,113 +464,87 @@
   // MENSAGEM FINAL DO VISITANTE
   // ==================================================
 
-  
-function showFinalReply() {
-  cancelAnimation();
+  function showFinalReply() {
+    cancelAnimation();
 
-  const list = $("#conversation-list");
-  const view = $("#conversation-view");
-  const messageList = $("#message-list");
-  const footer = $(".message-footer", view);
-
-  if (!view || !messageList) {
-    renderEnding();
-    showScreen("ending-screen");
-    return;
-  }
-
-  if (list) list.hidden = true;
-  view.hidden = false;
-
-  const title = $("#conversation-title");
-  const description = $("#conversation-description");
-
-  if (title) title.textContent = "7º B | conversas";
-  if (description) description.textContent = "Grupo da turma";
-
-  if (finalReplyShown) {
-    showScreen("messages-screen");
-    return;
-  }
-
-  finalReplyShown = true;
-
-  if (footer) footer.innerHTML = "";
-
-  const prompt = document.createElement("div");
-  prompt.className = "story-transition";
-  prompt.innerHTML = `
-    <p class="story-date">Alguns segundos depois</p>
-    <p>Você decide enviar uma última mensagem.</p>
-  `;
-
-  messageList.appendChild(prompt);
-
-  const sentMessage = document.createElement("article");
-  sentMessage.className = "message outgoing";
-  sentMessage.innerHTML = `
-    <div class="message-text">
-      Ela tentou cometer suicídio.
-    </div>
-    <div class="message-time">agora</div>
-  `;
-
-  messageList.appendChild(sentMessage);
-
-  messageList.scrollTop = messageList.scrollHeight;
-  showScreen("messages-screen");
-
-  
-  const finishButton = document.createElement("button");
-  finishButton.className = "story-continue";
-  finishButton.type = "button";
-  finishButton.textContent = "Finalizar";
-
-  finishButton.addEventListener("click", () => {
-    renderEnding();
-    showScreen("ending-screen");
-  });
-
-  if (footer) {
-    footer.appendChild(finishButton);
-  } else {
-    messageList.appendChild(finishButton);
-  }
-
-}
-
-
-  function sendFinalReply(form) {
-    const input = $("#final-reply-input", form);
+    const list = $("#conversation-list");
+    const view = $("#conversation-view");
     const messageList = $("#message-list");
-    const footer = $(".message-footer", $("#conversation-view"));
-    const text = input?.value.trim();
+    const footer = $(".message-footer", view);
 
-    if (!text || !messageList) return;
+    if (!view || !messageList) {
+      renderEnding();
+      showScreen("ending-screen");
+      return;
+    }
+
+    if (list) list.hidden = true;
+
+    view.hidden = false;
+
+    const title = $("#conversation-title");
+    const description = $("#conversation-description");
+
+    if (title) title.textContent = "7º B | conversas";
+
+    if (description) {
+      description.textContent = "Grupo da turma";
+    }
+
+    if (finalReplyShown) {
+      showScreen("messages-screen");
+      return;
+    }
+
+    finalReplyShown = true;
+
+    if (footer) footer.innerHTML = "";
+
+    const prompt = document.createElement("div");
+
+    prompt.className = "story-transition";
+    prompt.innerHTML = `
+      <p class="story-date">Alguns segundos depois</p>
+      <p>Você decide enviar uma última mensagem.</p>
+    `;
+
+    messageList.appendChild(prompt);
 
     const sentMessage = document.createElement("article");
+
     sentMessage.className = "message outgoing";
     sentMessage.innerHTML = `
-      <div class="message-text">${escapeHTML(text)}</div>
+      <div class="message-text">
+        Ela tentou cometer suicídio.
+      </div>
       <div class="message-time">agora</div>
     `;
 
     messageList.appendChild(sentMessage);
     messageList.scrollTop = messageList.scrollHeight;
 
-    if (footer) {
-      footer.innerHTML = "";
-    }
+    showScreen("messages-screen");
 
-    // Pequena pausa para a mensagem ser lida antes do desfecho.
-    setTimeout(() => {
+    const finishButton = document.createElement("button");
+
+    finishButton.className = "story-continue";
+    finishButton.type = "button";
+    finishButton.textContent = "Finalizar";
+
+    finishButton.addEventListener("click", () => {
       renderEnding();
       showScreen("ending-screen");
-    }, 1400);
+    });
+
+    if (footer) {
+      footer.appendChild(finishButton);
+    } else {
+      messageList.appendChild(finishButton);
+    }
   }
 
   // ==================================================
-  // ENCERRAMENTO E PROGRESSÃO
+  // ENCERRAMENTO
   // ==================================================
 
   function renderEnding() {
@@ -597,42 +583,41 @@ function showFinalReply() {
     }
   }
 
-  
-  
-function advanceStory() {
-  const stage = getStage();
+  // ==================================================
+  // TRANSIÇÕES ENTRE CAPÍTULOS
+  // ==================================================
 
-  const label = $("#transition-label");
-  const text = $("#transition-text");
+  function advanceStory() {
+    const stage = getStage();
+    const label = $("#transition-label");
+    const text = $("#transition-text");
 
-  if (label) {
-    label.textContent =
-      stageIndex < story.stages.length - 1
-        ? story.stages[stageIndex + 1].date
-        : "O que não aparece na tela";
+    if (label) {
+      label.textContent =
+        stageIndex < story.stages.length - 1
+          ? story.stages[stageIndex + 1].date
+          : "O que não aparece na tela";
+    }
+
+    if (text) {
+      text.textContent = stage.transition || "";
+    }
+
+    showScreen("transition-screen");
   }
 
-  if (text) {
-    text.textContent = stage.transition || "";
+  function continueTransition() {
+    if (stageIndex < story.stages.length - 1) {
+      stageIndex++;
+      finalReplyShown = false;
+
+      renderLockScreen();
+      renderConversationList();
+      showScreen("lock-screen");
+    } else {
+      showFinalReply();
+    }
   }
-
-  showScreen("transition-screen");
-}
-
-function continueTransition() {
-  if (stageIndex < story.stages.length - 1) {
-    stageIndex++;
-    finalReplyShown = false;
-
-    renderLockScreen();
-    showScreen("lock-screen");
-  } else {
-    showFinalReply();
-  }
-}
-
-  }
-
 
   // ==================================================
   // EVENTOS
@@ -688,14 +673,10 @@ function continueTransition() {
     }
   });
 
-  app.addEventListener("submit", (event) => {
-    if (event.target.id !== "final-reply-form") return;
-
-    event.preventDefault();
-    sendFinalReply(event.target);
-  });
-
-  $("#unlock-button")?.addEventListener("click", unlockPhone);
+  $("#unlock-button")?.addEventListener(
+    "click",
+    unlockPhone
+  );
 
   $("#back-to-conversations")?.addEventListener(
     "click",
@@ -704,6 +685,7 @@ function continueTransition() {
 
   $("#restart-button")?.addEventListener("click", () => {
     cancelAnimation();
+
     stageIndex = 0;
     finalReplyShown = false;
 
@@ -717,6 +699,7 @@ function continueTransition() {
   // ==================================================
 
   document.title = story.appName;
+
   renderLockScreen();
   renderConversationList();
   showScreen("lock-screen");
