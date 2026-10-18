@@ -1298,3 +1298,84 @@ a {
   font-weight: 700;
   overflow: hidden;
 }
+
+
+#transition-screen {
+  min-height: 100vh;
+  background: #101114;
+  color: #f3f0eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 24px;
+  box-sizing: border-box;
+}
+
+#transition-screen[hidden] {
+  display: none;
+}
+
+.chapter-transition {
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+  animation: chapterFadeIn 900ms ease both;
+}
+
+.transition-label {
+  color: #aaa7a2;
+  font-size: 11px;
+  letter-spacing: 3px;
+  line-height: 1.6;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.transition-divider {
+  width: 38px;
+  height: 1px;
+  background: #77736e;
+  margin: 0 auto 28px;
+}
+
+.transition-text {
+  max-width: 360px;
+  margin: 0 auto 44px;
+  font-family: Georgia, serif;
+  font-size: clamp(21px, 5vw, 29px);
+  line-height: 1.6;
+  font-weight: normal;
+}
+
+#transition-continue {
+  background: transparent;
+  color: #f3f0eb;
+  border: 1px solid #77736e;
+  padding: 12px 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+#transition-continue:hover {
+  background: #f3f0eb;
+  color: #101114;
+}
+
+@keyframes chapterFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chapter-transition {
+    animation: none;
+  }
+}
