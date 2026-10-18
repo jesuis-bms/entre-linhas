@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -23,6 +22,8 @@
 
 <body>
     <main id="app">
+
+        <!-- Tela de bloqueio -->
         <section
             id="lock-screen"
             class="screen active"
@@ -50,7 +51,7 @@
                     class="notifications"
                     aria-label="Notificações"
                 >
-                    <!-- As notificações serão inseridas pelo JavaScript. -->
+                    <!-- Notificações inseridas pelo JavaScript. -->
                 </div>
             </div>
 
@@ -68,7 +69,6 @@
                 <span class="lock-shortcut" aria-hidden="true">⌕</span>
             </div>
         </section>
-
 
         <!-- Aplicativo de mensagens -->
         <section
@@ -97,7 +97,7 @@
                 id="conversation-list"
                 class="conversation-list"
             >
-                <!-- A lista de conversas será criada pelo JavaScript. -->
+                <!-- Lista de conversas criada pelo JavaScript. -->
             </div>
 
             <article
@@ -128,7 +128,7 @@
                     aria-live="polite"
                     aria-relevant="additions"
                 >
-                    <!-- As mensagens aparecerão em sequência. -->
+                    <!-- Mensagens exibidas em sequência. -->
                 </div>
 
                 <div class="message-footer">
@@ -136,7 +136,6 @@
                 </div>
             </article>
         </section>
-
 
         <!-- Rede social fictícia -->
         <section
@@ -162,7 +161,7 @@
             </header>
 
             <div id="social-profile" class="social-profile">
-                <!-- O perfil da personagem será inserido pelo JavaScript. -->
+                <!-- Perfil inserido pelo JavaScript. -->
             </div>
 
             <div
@@ -170,20 +169,32 @@
                 class="social-feed"
                 aria-label="Publicações"
             >
-                <!-- Fotos, vídeos fictícios e comentários aparecerão aqui. -->
+                <!-- Publicações e comentários inseridos pelo JavaScript. -->
             </div>
         </section>
 
-        
-        <section id="transition-screen" class="screen" hidden>
+        <!-- Transição entre capítulos -->
+        <section
+            id="transition-screen"
+            class="screen"
+            aria-label="Transição entre capítulos"
+            hidden
+        >
             <div class="chapter-transition">
-                <p id="transition-label" class="transition-label">
-                  ALGUNS DIAS DEPOIS
+                <p
+                    id="transition-label"
+                    class="transition-label"
+                    aria-live="polite"
+                >
+                    ALGUNS DIAS DEPOIS
                 </p>
 
                 <div class="transition-divider"></div>
 
-                <p id="transition-text" class="transition-text"></p>
+                <p
+                    id="transition-text"
+                    class="transition-text"
+                ></p>
 
                 <button
                     id="transition-continue"
@@ -194,8 +205,7 @@
                     Continuar
                 </button>
             </div>
-        </section>    
-
+        </section>
 
         <!-- Encerramento da narrativa e campanha -->
         <section
@@ -214,7 +224,7 @@
                 </p>
 
                 <div id="ending-details">
-                    <!-- O texto final da campanha será inserido pelo JavaScript. -->
+                    <!-- Texto final inserido pelo JavaScript. -->
                 </div>
 
                 <button id="restart-button" type="button">
@@ -226,3 +236,4 @@
     </main>
 </body>
 </html>
+
