@@ -255,13 +255,16 @@
 
       element.className = `message${outgoing ? " outgoing" : ""}`;
 
+      
       const sender = outgoing
         ? ""
         : `
           <div class="message-sender">
-            ${escapeHTML(message.sender)}
+            ${avatar(message.avatar || message.sender[0], "message-avatar")}
+            <span>${escapeHTML(message.sender)}</span>
           </div>
         `;
+
 
       const content = message.type === "link"
         ? `
