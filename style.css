@@ -1266,3 +1266,40 @@ button:disabled {
     }
 }
 
+/* Correção definitiva da largura da transição */
+#app {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+#transition-screen,
+#transition-screen.active {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+
+    width: 100% !important;
+    max-width: none !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+
+    transform: none !important;
+    background: var(--background);
+}
+
+#transition-screen .chapter-transition {
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: 0;
+}
