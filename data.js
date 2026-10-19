@@ -1,6 +1,3 @@
-
-
-
 window.STORY_DATA = {
   appName: "Não Compartilhe",
 
@@ -125,7 +122,7 @@ window.STORY_DATA = {
         }
       ],
 
-      transition: "Você fecha o perfil. A notificação continua ali."
+      transition: "Você fecha o perfil. Os comentários continuam ali."
     },
 
     {
@@ -148,7 +145,7 @@ window.STORY_DATA = {
         description: "Grupo da turma",
         preview: "social.app/coracoraline",
         time: "18:41",
-        unread: 9,
+        unread: 10,
 
         messages: [
           {
@@ -203,7 +200,7 @@ window.STORY_DATA = {
             sender: "Ju",
             avatar: "J",
             time: "18:26",
-            text: "Olha essa nova publicação, Rafa. Certeza que vc também vai rir"
+            text: "Deixa de ser armagurada e olha essa nova publicação, Rafa. Certeza que vc também vai rir"
           },
           {
             sender: "Ju",
@@ -295,20 +292,20 @@ window.STORY_DATA = {
         }
       ],
 
-      transition: "Dessa vez, você percebe que a publicação já foi compartilhada."
+      transition: "Um perfil alegre se torna triste. Uma boa aluna perde suas notas."
     },
 
     {
       id: 2,
       date: "Terça-feira, 20 de outubro",
-      time: "21:12",
+      time: "21:11",
 
       notification: {
         app: "Mensagens",
         icon: "📞",
         time: "agora",
         title: "Bia",
-        message: "gente, vocês têm notícias da Aline?"
+        message: "isso não é, porque ela me disse que não qu..."
       },
 
       conversation: {
@@ -316,9 +313,9 @@ window.STORY_DATA = {
         name: "Sala 4 | conversas",
         avatar: "📙",
         description: "Grupo da turma",
-        preview: "Ela sumiu.",
+        preview: "tá vendo o que vocês fizeram?",
         time: "21:12",
-        unread: 5,
+        unread: 6,
 
         messages: [
           {
@@ -481,7 +478,7 @@ window.STORY_DATA = {
         }
       ],
 
-      transition: "A última publicação de Aline foi feita na noite anterior. Ela não voltou à escola."
+      transition: "A última publicação de Aline foi feita na noite anterior. Ela não voltou à escola; ninguém foi respondido."
     }
   ],
 
@@ -495,7 +492,7 @@ window.STORY_DATA = {
 
       "Aline não estava sozinha. Ela tinha pessoas que se importavam com ela, que a apoiaram e a ajudaram a buscar ajuda profissional. Mas o impacto do bullying e do cyberbullying não desapareceu da noite para o dia.",
 
-      "As mensagens não desapareceram quando as pessoas fecharam o aplicativo. Os compartilhamentos continuaram circulando. E quem viu o que estava acontecendo também teve escolhas a fazer.",
+      "Se você tem um filho, eduque-o, porque ódio pelo outro não é natural, é ensinado; e se ele não for educado na infância, a fase adulta não perdoa. Se você conhece alguém que sofre bullying, ajude-o a procurar ajuda.",
 
       "Não compartilhe humilhações. Guarde evidências, denuncie o conteúdo e procure um adulto de confiança. Se alguém estiver em perigo imediato, peça ajuda a um adulto e aos serviços de emergência.",
 
@@ -505,6 +502,6 @@ window.STORY_DATA = {
     campaignTitle: "O bullying é temporário. As feridas permanecem.",
     campaignSubtitle: "Antes de compartilhar, pense. Antes de rir, perceba. Antes que piore, intervenha.",
 
-    credits: "Uma campanha de conscientização sobre bullying e cyberbullying feita por Bernard Luiz."
+    credits: "Uma campanha de conscientização sobre bullying e cyberbullying feita por Bernard Luiz, Lucas Reis, Jorge Alves, Samuel Campos e Davi Luan."
   }
 };
